@@ -7,6 +7,8 @@ window.onload = function () {
 
     getAllCoursesFromAPI();
 
+   
+
 }
 
 function getAllCoursesFromAPI() {
