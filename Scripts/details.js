@@ -17,7 +17,7 @@ function urlParamsFunction(){
 
     let id = -1;
     if (urlParams.has("courseid") === true) {
-
+        document.getElementById("error").innerHTML = "";
         id = urlParams.get("courseid")
         console.log(id);
 
@@ -28,7 +28,7 @@ function urlParamsFunction(){
             console.log(course);
             showDetailforCourse(course);
             
-        })
+        });
     } 
     else{
         document.getElementById("error").innerHTML = "Oh no! there's no querystring... you should get to this page through a hyperlink."
@@ -42,10 +42,7 @@ function showDetailforCourse(course){
 
 
  let newRow = coursedetailsbody.insertRow(-1);
-        
-       
-
-        
+          
         let courseNameCell = newRow.insertCell(0);
         courseNameCell.innerHTML = course.courseName;
 
