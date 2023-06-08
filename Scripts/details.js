@@ -7,9 +7,11 @@ window.onload = function () {
     console.log("window load");
 
     urlParamsFunction();
+
 }
 
 function urlParamsFunction(){
+    
    let urlParams = new URLSearchParams(location.search);
     console.log(urlParams);
 
@@ -41,14 +43,22 @@ function showDetailforCourse(course){
 
  let newRow = coursedetailsbody.insertRow(-1);
         
-        let instructorCell = newRow.insertCell(0);
-        instructorCell.innerHTML = course.instructor;
+       
+
+        
+        let courseNameCell = newRow.insertCell(0);
+        courseNameCell.innerHTML = course.courseName;
+
+       let instructorCell = newRow.insertCell(1);
+        instructorCell.innerHTML = course.instructor;  
+
+          let startDateCell = newRow.insertCell(2);
+        startDateCell.innerHTML = course.startDate;
     
-        let numDaysCell = newRow.insertCell(1);
+        let numDaysCell = newRow.insertCell(3);
         numDaysCell.innerHTML = course.numDays;
     
-        let startDateCell = newRow.insertCell(2);
-        startDateCell.innerHTML = course.startDate;
+      
     
       }
       console.log('Course details are in the table');
